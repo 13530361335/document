@@ -1,4 +1,5 @@
-IntelliJ Idea 常用快捷键列表
+**IntelliJ Idea 常用快捷键列表**
+```
 Ctrl+Shift + Enter，语句完成
 “！”，否定完成，输入表达式时按 “！”键
 Ctrl+E，最近的文件
@@ -134,3 +135,4 @@ Alt+F7，查找用法
 Ctrl+Alt+F7，显示用法
 Ctrl+F7，在文件中查找用法
 Ctrl+Shift+F7，在文件中高亮显示用法
+```
