@@ -167,4 +167,39 @@ public class ExcelUtil {
         DataValidation validation = dvHelper.createValidation(constraint, addressList);
         sheet.addValidationData(validation);
     }
+    
+    
+    // 设置标题行样式
+    public XSSFCellStyle setHeadStyle(XSSFWorkbook wk) {
+        // 标题字体样式
+        XSSFFont headFont = wk.createFont();
+        headFont.setFontName("宋体");
+        headFont.setFontHeight(12);
+        headFont.setColor(HSSFColor.WHITE.index);
+        // 标题样式
+        XSSFCellStyle headStyle = wk.createCellStyle();
+        headStyle.setFont(headFont);
+        headStyle.setFillForegroundColor(IndexedColors.GREY_40_PERCENT.index);// 背景色
+        headStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
+        headStyle.setVerticalAlignment(VerticalAlignment.CENTER);// 竖向居中
+        headStyle.setAlignment(HorizontalAlignment.CENTER);// 横向居中
+        headStyle.setBorderBottom(BorderStyle.THIN);// 边框
+        headStyle.setBorderLeft(BorderStyle.THIN);// 边框
+        headStyle.setBorderRight(BorderStyle.THIN);// 边框
+        headStyle.setBorderTop(BorderStyle.THIN);// 边框
+        return headStyle;
+    }
+
+    // 设置内容样式
+    public XSSFCellStyle setCellStyle(XSSFWorkbook wk) {
+        // 内容字体样式
+        XSSFFont contFont = wk.createFont();
+        contFont.setFontName("Arial");
+        contFont.setFontHeight(10);
+        // 内容样式
+        XSSFCellStyle contStyle = wk.createCellStyle();
+        contStyle.setFont(contFont);
+//        contStyle.setWrapText(true);// 自动换行
+        return contStyle;
+    }
 }
